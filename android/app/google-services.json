@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "253054387731",
+    "project_id": "analytics-songwriter",
+    "storage_bucket": "analytics-songwriter.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253054387731:android:e9459d3661c97801c8e1e6",
+        "android_client_info": {
+          "package_name": "com.example.luvedube"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0-7-wUr-s63sUVVOcGadjudfqiJ26sFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

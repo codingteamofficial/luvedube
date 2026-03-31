@@ -1,0 +1,1 @@
+ C:\\Users\\me\\Desktop\\song\ app\\.dart_tool\\flutter_build\\8b482b906e58de04d592810ba5ec1321\\dart_build_result.json:  C:\\Users\\me\\Desktop\\song\ app\\.dart_tool\\package_config.json C:\\Users\\me\\Desktop\\song\ app\\pubspec.yaml C:\\flutter\\bin\\cache\\dart-sdk\\version c:\\users\\me\\desktop\\song\ app\\.dart_tool\\package_config.json
