@@ -1,11 +1,21 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:luvedube/screens/home_screen.dart';
+import 'package:luvedube/theme/app_theme.dart';
 
-void main() async {    
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // must come BEFORE runApp
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.light,
+    systemNavigationBarColor: Tech.bg,
+    systemNavigationBarIconBrightness: Brightness.light,
+  ));
   runApp(const MainApp());
-  WidgetsFlutterBinding.ensureInitialized();
-  await MobileAds.instance.initialize();
+  unawaited(MobileAds.instance.initialize()); // don't block first frame
 }
 
 class MainApp extends StatelessWidget {
@@ -14,36 +24,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Luvedube',        
-        theme: ThemeData(
-          primaryColor: Colors.indigo,
-          scaffoldBackgroundColor: const Color(0xFFF6F7F9), // very light grey
-          appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.white,
-            elevation: 1,
-            iconTheme: IconThemeData(color: Colors.indigo),
-            titleTextStyle: TextStyle(color: Colors.indigo, fontSize: 18, fontWeight: FontWeight.w600),
-          ),
-          inputDecorationTheme: InputDecorationTheme(
-            filled: true,
-            fillColor: Colors.white,
-            contentPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(6),
-              borderSide: const BorderSide(color: Color(0xFFE0E0E0)),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(6),
-              borderSide: const BorderSide(color: Color(0xFFE0E0E0)),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(6),
-              borderSide: const BorderSide(color: Colors.indigo),
-            ),
-          ),
-          
-      ),
-      home: const HomeScreen()     
+      title: 'LuveDuve',
+      debugShowCheckedModeBanner: false,
+      theme: Tech.theme(),
+      home: const HomeScreen(),
     );
   }
 }

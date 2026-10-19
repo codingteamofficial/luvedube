@@ -1,0 +1,21 @@
+# Default Flutter / Dart ignore rules
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+linux/flutter/ephemeral/
+macos/Flutter/ephemeral/
+windows/flutter/ephemeral/
+
+# Android specific
+.gradle/
+app/captures/
+*.apk
+*.ap_
+*.aab
+
+# IDE specific
+.idea/
+*.iml
+.vscode/
